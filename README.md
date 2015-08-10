@@ -2,8 +2,7 @@
 
 Shiny Token Auth makes it easy to authenticate between a remote server and a Shiny server application. This can be useful in situations where a user authenticates through a web-app, and you want to embed a Shiny application in an iframe in your website, but otherwise lock-down someone directly accessing the Shiny application.
 
-# Setup and usage
-
+## Usage
 Your remote application should generate a token each time it loads the Shiny application. That token should then be appended to the Shiny application url using the parameter `t`. For example:
 
 ```
@@ -39,7 +38,7 @@ shinyServer(function(input, output, session) {
 ```
 You can now use the value of `isAuth` (which is either `TRUE` or `FALSE`), to determine whether your user is authenticated or not. If a user is not authenticated, you could cut off access to the datasource, or change the UI displayed in your `ui.R` file.
 
-# Dependencies
+## Dependencies
 
 Shiny Token Auth depends on the following libraries:
 
